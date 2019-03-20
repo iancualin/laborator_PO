@@ -14,7 +14,7 @@ namespace laborator4
             Fractie f2 = new Fractie(3,9);
             f1.Print();
             f2.Print();
-            Fractie f3 = new Fractie("  4 / 8  ");
+            Fractie f3 = new Fractie("2 / 4");
             f3.Print();
             Fractie f4;
             f4 = f2.Add(f3);

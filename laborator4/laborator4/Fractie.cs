@@ -15,6 +15,7 @@ namespace laborator4
         {
             numarator = 0;
             numitor = 1;
+
         }
 
         public Fractie(string v)
@@ -46,6 +47,31 @@ namespace laborator4
                 }
 
             }
+        }
+
+        public Fractie Divide(Fractie right)
+        {
+            int r_numarator, r_numitor;
+            r_numarator = numarator * right.numitor;
+            r_numitor = numitor * right.numarator;
+            return new Fractie(r_numarator, r_numitor);
+
+        }
+
+        public Fractie Subtract(Fractie right)
+        {
+            int r_numarator, r_numitor;
+            r_numitor = numitor * right.numitor;
+            r_numarator = numarator * right.numitor - numitor * right.numarator;
+            return new Fractie(r_numarator, r_numitor);
+        }
+
+        public Fractie Multiply(Fractie right)
+        {
+            int r_numarator, r_numitor;
+            r_numarator = numarator * right.numarator;
+            r_numitor = numitor * right.numitor;
+            return new Fractie(r_numarator, r_numitor);
         }
 
         public Fractie Add(Fractie right)
