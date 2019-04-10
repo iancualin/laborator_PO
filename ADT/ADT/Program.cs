@@ -40,8 +40,20 @@ namespace ADT
             Console.WriteLine(st.IsEmpty);
             Console.WriteLine(st.IsFull);
             //instructiuneaa va lansa exceptia
-            st.Pop();
+            
+                try
+
+               {
+                    st.Pop();
+               }
+
+    catch (StackEmptyException e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+            
         }
     }
 }
-//
+//queue

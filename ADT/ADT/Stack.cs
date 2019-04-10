@@ -42,7 +42,7 @@ namespace ADT
                 return v[top - 1];
             }
             else
-                throw new StackEmptyException(); 
+                throw new StackEmptyException("Stack empty"); 
         }
 
         public bool IsFull
@@ -80,7 +80,7 @@ namespace ADT
         private void resize(int size)
         {
             int[] v2 = new int[size];
-            for(int i=0;i<v.Length;i++)
+            for(int i=0;i<v2.Length && i<v.Length;i++)
             {
                 v2[i] = v[i];
             }
@@ -100,7 +100,7 @@ namespace ADT
                 // return v[top - 1];
             }
             else
-                throw new StackEmptyException();
+                throw new StackEmptyException("Empty stack in pop");
         }
     }
 }
